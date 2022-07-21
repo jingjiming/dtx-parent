@@ -1,0 +1,25 @@
+server: 
+  port: 56081
+
+swagger:
+  enable: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bank1?useUnicode=true&useSSL=false
+    username: root
+    password: admin
+
+rocketmq:
+  producer:
+    group: producer_bank1
+  name-server: 127.0.0.1:9876
+
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        web: info
+
